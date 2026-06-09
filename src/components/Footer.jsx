@@ -1,13 +1,11 @@
 import Link from "next/link";
-// React Icons se FontAwesome icons import kar rahe hain
 import { FaFacebook, FaTwitter, FaInstagram, FaGithub, FaPlus, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-400 py-8 mt-12 border-t border-gray-800 px-10">
       <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
-        
-        {/* Copyright Text */}
+      
         <p className="text-sm text-center md:text-left">
           &copy; {new Date().getFullYear()} <span className="text-yellow-500 font-semibold">MovieFlix</span>. All rights reserved.
         </p>

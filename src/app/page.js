@@ -11,7 +11,7 @@ function HomeContent() {
   const [movies, setMovies] = useState([]);
   const [category, setCategory] = useState("All");
   const [year, setYear] = useState("All");
-  const [sortOrder, setSortOrder] = useState("Default"); // Default option set kiya
+  const [sortOrder, setSortOrder] = useState("Default"); 
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 
@@ -33,8 +33,7 @@ function HomeContent() {
     filteredMovies.sort((a, b) => a.name.localeCompare(b.name));
   } else if (sortOrder === "Descending") {
     filteredMovies.sort((a, b) => b.name.localeCompare(a.name));
-  } // 'Default' hone par sequential filtering order maintain rahega (koi extra sorting nahi)
-
+  } 
   // Pagination Logic
   const totalPages = Math.ceil(filteredMovies.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
@@ -51,7 +50,6 @@ function HomeContent() {
     router.push("/");
   };
 
-  // Check karein kya koi bhi filter active hai
   const isFilterActive = searchQuery || category !== "All" || year !== "All" || sortOrder !== "Default";
 
   return (

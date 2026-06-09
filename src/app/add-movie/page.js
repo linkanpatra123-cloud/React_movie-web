@@ -33,7 +33,6 @@ export default function AddMovie() {
   return (
     <div className="max-w-xl mx-auto bg-gray-900 p-8 rounded-lg shadow-md mt-10 relative">
       
-      {/* Cross (X) Close Button */}
       <button 
         onClick={() => router.push("/")} 
         className="absolute top-4 right-4 text-gray-400 hover:text-red-500 text-2xl font-bold transition"
